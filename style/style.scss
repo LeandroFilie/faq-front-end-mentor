@@ -1,0 +1,118 @@
+@import './scss/colors';
+@import './scss/base';
+
+body{
+  min-height: 100vh;
+  background: linear-gradient(0deg, rgba(101,101,231,1) 0%, rgba(175,103,233,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  max-width: 1440px;
+  height: 30rem;
+  border-radius: 16px;
+
+  background: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 24px;
+
+  .image{
+    position: relative;
+    width: 100%;
+
+    .image-bg{
+      background-image: url("../images/bg-pattern-desktop.svg");
+      height: 30rem;
+      background-position: 115% 60%;
+      background-repeat: no-repeat;
+
+      .box{
+        position: fixed;
+        top: 47%;
+        left: 6%;
+      }
+
+      .image-woman{
+        background-image: url("../images/illustration-woman-online-desktop.svg");
+        height: 30rem;
+        background-position: 450% 60%;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+.faq {
+  padding: 2rem;
+
+  h2{
+    margin: 2rem 0;
+    font-size: 1.85rem;
+  }
+
+  .item{
+    display: flex;
+    flex-direction: column;
+  
+    border-bottom: 1px solid $divider-light;
+  
+    & + .item{
+      margin-top: 0.75rem;
+    }
+  
+    .question{
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.5rem 0;
+
+      display: flex;
+      justify-content: space-between;
+
+      cursor: pointer;
+
+      transition: all .2s;
+
+      &:hover{
+        color: $text-soft-red;
+      }
+
+
+      &::after{
+        content: url('../images/icon-arrow-down.svg');
+        margin-right: 1rem;
+
+        transition: all .2s;
+      }
+
+      &.active{
+        font-weight: bold;
+
+        &::after{
+          content: url('../images/icon-arrow-down.svg');
+          margin-right: 1rem;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  
+    .response{
+      max-height: 0;
+      
+      font-size: 0.9rem;
+      color: $text-dark-grayish-blue;
+
+      line-height: 1.5rem;
+      padding-right: 2rem;
+      margin-bottom: 0.75rem;
+
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+  }
+}
