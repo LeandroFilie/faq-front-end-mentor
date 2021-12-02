@@ -27,6 +27,7 @@ body {
 }
 
 .card {
+  position: relative;
   max-width: 1440px;
   height: 30rem;
   border-radius: 16px;
@@ -41,27 +42,31 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 24px;
+  margin: 2rem;
 }
 
-.card .image {
-  position: relative;
+.card .image-wrapper {
   width: 100%;
 }
 
-.card .image .image-bg {
+.card .image-wrapper .woman-mobile, .card .image-wrapper .bg-mobile {
+  display: none;
+}
+
+.card .image-wrapper .image-bg {
   background-image: url("../images/bg-pattern-desktop.svg");
   height: 30rem;
   background-position: 115% 60%;
   background-repeat: no-repeat;
 }
 
-.card .image .image-bg .box {
-  position: fixed;
+.card .image-wrapper .image-bg .box {
+  position: absolute;
   top: 47%;
-  left: 6%;
+  left: -12%;
 }
 
-.card .image .image-bg .image-woman {
+.card .image-wrapper .image-bg .image-woman {
   background-image: url("../images/illustration-woman-online-desktop.svg");
   height: 30rem;
   background-position: 450% 60%;
@@ -139,5 +144,54 @@ body {
   overflow: hidden;
   -webkit-transition: max-height 0.2s ease-out;
   transition: max-height 0.2s ease-out;
+}
+
+@media (max-width: 1200px) {
+  main {
+    padding: 10rem 0;
+  }
+  .card {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 100%;
+  }
+  .card .image-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    top: -25%;
+  }
+  .card .image-wrapper .woman-mobile, .card .image-wrapper .bg-mobile {
+    display: block;
+    width: 20rem;
+  }
+  .card .image-wrapper .bg-mobile {
+    position: absolute;
+    top: 50%;
+  }
+  .image-bg {
+    display: none;
+  }
+  .faq h2 {
+    text-align: center;
+    margin-top: 6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .card .image-wrapper {
+    top: -20%;
+  }
+  .card .image-wrapper .woman-mobile, .card .image-wrapper .bg-mobile {
+    width: 90%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

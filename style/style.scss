@@ -10,6 +10,7 @@ body{
 }
 
 .card{
+  position: relative;
   max-width: 1440px;
   height: 30rem;
   border-radius: 16px;
@@ -21,10 +22,14 @@ body{
   justify-content: center;
 
   gap: 24px;
+  margin: 2rem;
 
-  .image{
-    position: relative;
+  .image-wrapper{
     width: 100%;
+
+    .woman-mobile, .bg-mobile{
+      display: none;
+    }
 
     .image-bg{
       background-image: url("../images/bg-pattern-desktop.svg");
@@ -33,9 +38,9 @@ body{
       background-repeat: no-repeat;
 
       .box{
-        position: fixed;
+        position: absolute;
         top: 47%;
-        left: 6%;
+        left: -12%;
       }
 
       .image-woman{
@@ -116,3 +121,5 @@ body{
     }
   }
 }
+
+@import './scss/responsive';

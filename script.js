@@ -25,8 +25,6 @@ function openQuestion(questionElement){
 function handlerFaq(event){
   const questionElement = event.target;
   const isOpenQuestion = questionElement.classList.contains('active');
-/*   const responseElement = questionElement.nextElementSibling;
-  const isOpenResponse = classList.contains('show'); */
 
   isOpenQuestion ? closeQuestion(questionElement) : openQuestion(questionElement);
 }
