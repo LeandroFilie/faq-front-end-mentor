@@ -26,12 +26,12 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/LeandroFilie/ToDo-List.git
+$ git clone https://github.com/LeandroFilie/FAQ-FrontEndMentor.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd ToDo-List
+$ cd FAQ-FrontEndMentor
 ```
-Para acesso de forma online, [clique aqui](https://to-do-list-leandrofilie.vercel.app)
+Para acesso de forma online, [clique aqui](https://faq-front-end-mentor-leandrofilie.vercel.app/)
 
 ---
 
